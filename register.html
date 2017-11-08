@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>用户注册</title>
+	<!-- 引入 WeUI -->
+	<link rel="stylesheet" href="dist/style/weui.css"/>
+	<link rel="stylesheet" href="dist/example/example.css"/>
+</head>
+<body ontouchstart="">
+    <div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
+    <form action="register.php" method="get" >
+		<div class="weui-cells weui-cells_form">
+   			<div class="weui-cell">
+        		<div class="weui-cell__hd"><label class="weui-label">用户名</label></div>
+        		<div class="weui-cell__bd">
+            		<input class="weui-input" type="text" placeholder="用户名..." name="name"/>
+        		</div>
+    		</div>
+    		<div class="weui-cell weui-cell_form">
+        		<div class="weui-cell__hd">
+            		<label class="weui-label">密码</label>
+        		</div>
+        		<div class="weui-cell__bd">
+            		<input class="weui-input" type="password" placeholder="用户密码..." name="password"/>
+        		</div>
+    		</div>
+            <div class="weui-cell weui-cell_form">
+        		<div class="weui-cell__hd">
+            		<label class="weui-label">确认密码</label>
+        		</div>
+        		<div class="weui-cell__bd">
+            		<input class="weui-input" type="password" placeholder="确认密码..." name="assertpassword"/>
+        		</div>
+    		</div>
+            <div class="weui-cell weui-cell_form">
+        		<div class="weui-cell__hd">
+            		<label class="weui-label">真实姓名</label>
+        		</div>
+        		<div class="weui-cell__bd">
+            		<input class="weui-input" type="text" placeholder="真实姓名..." name="truename"/>
+        		</div>
+    		</div>
+            <div class="weui-cell weui-cell_form">
+        		<div class="weui-cell__hd">
+            		<label class="weui-label">性别</label>
+        		</div>
+        		<div class="weui-cell weui-cell_select">
+        			<div class="weui-cell__bd">
+            			<select class="weui-select" name="sex">
+                			<option selected="" value="男">男</option>
+                			<option value="女">女</option>
+            			</select>
+        			</div>
+   				</div>
+    		</div>
+            <div class="weui-cell weui-cell_form">
+        		<div class="weui-cell__hd">
+            		<label class="weui-label">年龄</label>
+        		</div>
+        		<div class="weui-cell__bd">
+            		<input class="weui-input" type="text" placeholder="年龄..." name="age"/>
+        		</div>
+    		</div>
+            <div class="weui-cell weui-cell_form">
+        		<div class="weui-cell__hd">
+            		<label class="weui-label">电话</label>
+        		</div>
+        		<div class="weui-cell__bd">
+            		<input class="weui-input" type="text" placeholder="电话..." name="num"/>
+        		</div>
+    		</div>
+            <div class="weui-cell weui-cell_form">
+        		<div class="weui-cell__hd">
+            		<label class="weui-label">地址</label>
+        		</div>
+        		<div class="weui-cell__bd">
+            		<input class="weui-input" type="text" placeholder="地址..." name="addr"/>
+        		</div>
+    		</div>
+            <div class="weui-cell weui-cell_form">
+        		<div class="weui-cell__hd">
+            		<label class="weui-label">用户类型</label>
+        		</div>
+        		<div class="weui-cell weui-cell_select">
+        			<div class="weui-cell__bd">
+            			<select class="weui-select" name="authority">
+                			<option selected="" value="1">非签约用户</option>
+                			<option value="2">签约用户</option>
+                            <option value="3">医生</option>
+            			</select>
+        			</div>
+   				</div>
+    		</div>
+		</div>
+	<div class="weui-btn-area">
+		<button class="weui-btn weui-btn_primary" id="showTooltips">确定</button>
+    	<a class="weui-btn weui-btn_primary" href="login.php" id="showTooltips">取消</a>
+	</div>
+    </form>
+	<script src="dist/example/example.js"></script>
+	<script src="dist/example/zepto.min.js"></script>
+
+    </body>
+</html>
