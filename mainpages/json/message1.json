@@ -1,0 +1,20 @@
+[{
+    "msgId" : "1111",
+    "userface" : "../../images/userface1.jpg",
+    "userName" : "老王",
+    "userAsk" : "老骆啊，我建议你也签一个家庭医生吧，方便！",
+    "askTime" : "2017-05-27 12:50",
+    "msgReply" : [{
+        "userface" : "../../images/face.jpg",
+        "userName" : "阿骆",
+        "userAsk" : "我现在正在了解呢",
+        "askTime" : "2017-05-27 13:50"
+    }]
+},{
+    "msgId" : "2222",
+    "userface" : "../../images/userface2.jpg",
+    "userName" : "老李",
+    "userAsk" : "老骆你签约的时候喊我一声撒",
+    "askTime" : "2017-05-27 12:50",
+    "msgReply" : []
+}]

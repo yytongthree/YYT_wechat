@@ -1,0 +1,46 @@
+[{
+    "msgId" : "1111",
+    "userface" : "../../images/userface1.jpg",
+    "userName" : "老王",
+    "userAsk" : "老曹啊，你那个签约医生怎么样啊？",
+    "askTime" : "2017-05-27 12:50",
+    "msgReply" : [{
+        "userface" : "../../images/face.jpg",
+        "userName" : "曹操",
+        "userAsk" : "华医生不错啊，很关心我们这些老家伙，年龄在资历够，挺推荐的",
+        "askTime" : "2017-05-27 13:50"
+    }]
+},{
+    "msgId" : "2222",
+    "userface" : "../../images/userface2.jpg",
+    "userName" : "老李",
+    "userAsk" : "老曹你签约了之后都能干啥啊？",
+    "askTime" : "2017-05-27 12:50",
+    "msgReply" : []
+},{
+    "msgId" : "3333",
+    "userface" : "../../images/userface3.jpg",
+    "userName" : "老赵",
+    "userAsk" : "老曹你是咋找签约医生的？",
+    "askTime" : "2017-05-27 12:50",
+    "msgReply" : []
+},{
+    "msgId" : "4444",
+    "userface" : "../../images/userface4.jpg",
+    "userName" : "老高",
+    "userAsk" : "老曹啊，这签约医生靠不靠谱啊",
+    "askTime" : "2017-05-27 12:50",
+    "msgReply" : [{
+        "userface" : "../../images/face.jpg",
+        "userName" : "曹操",
+        "userAsk" : "靠谱！签约之后我平时查自己的身体信息都方便多了啊",
+        "askTime" : "2017-05-27 13:50"
+    }]
+},{
+    "msgId" : "5555",
+    "userface" : "../../images/userface5.jpg",
+    "userName" : "老楚",
+    "userAsk" : "老曹啊，这签约服务的价钱贵不贵",
+    "askTime" : "2017-05-27 12:50",
+    "msgReply" : []
+}]

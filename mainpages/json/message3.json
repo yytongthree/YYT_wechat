@@ -1,0 +1,27 @@
+[{
+    "msgId" : "1111",
+    "userface" : "../../images/userface1.jpg",
+    "userName" : "曹操",
+    "userAsk" : "华医生我最近身体不太舒服，老咳嗽，你帮我看看我是生了什么病啊",
+    "askTime" : "2017-05-27 12:50",
+    "msgReply" : [{
+        "userface" : "../../images/face.jpg",
+        "userName" : "华佗",
+        "userAsk" : "最近天气转凉，您可能没有做好保暖工作啊",
+        "askTime" : "2017-05-27 13:50"
+    }]
+},{
+    "msgId" : "2222",
+    "userface" : "../../images/userface2.jpg",
+    "userName" : "刘备",
+    "userAsk" : "华医生你们这个签约服务是怎么个签约法啊？",
+    "askTime" : "2017-05-27 12:50",
+    "msgReply" : []
+},{
+    "msgId" : "3333",
+    "userface" : "../../images/userface3.jpg",
+    "userName" : "孙权",
+    "userAsk" : "华医生我那个药没了你给我开张电子药房让我拿药去吧！",
+    "askTime" : "2017-05-27 12:50",
+    "msgReply" : []
+}]
