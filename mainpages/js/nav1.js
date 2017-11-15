@@ -6,7 +6,7 @@ var navs1 = [{
 },{
 	"title" : "聊天室",
 	"icon" : "icon-text",
-	"href" : "page/news/newsList.html",
+	"href" : "page/chat/main.php",
 	"spread" : false
 },{
 	"title" : "文章列表",

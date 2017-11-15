@@ -1,5 +1,4 @@
 var $,tab,skyconsWeather;
-//var pass;
 layui.config({
 	base : "js/"
 }).use(['bodyTab','form','element','layer','jquery'],function(){
@@ -27,20 +26,21 @@ layui.config({
 	if(window.sessionStorage.getItem("lockcms") == "true"){
 		lockPage();
 	}
-/*	$.ajax({
-		url:"index.php?action=ok",
-		type:'POST',
-		data:'pass='+pass,
-		async:true,
-		success: function(data){
-			pass=data;
-		}
-	})*/
 	
 	// 解锁
 	$("#unlock").on("click",function(){
+		/*var pass=10;
+			$.ajax({
+				url:"index.php?action=ok",
+				type:'POST',
+				data:'pass='+pass,
+				async:true,
+				success: function(data){
+					password=data;
+				}
+			})*/
 		if($(this).siblings(".admin-header-lock-input").val() == ''){
-			layer.msg("请输入解锁密码！"+pass);
+			layer.msg("请输入解锁密码！");
 		}else{
 			if($(this).siblings(".admin-header-lock-input").val() == "123456"){
 				window.sessionStorage.setItem("lockcms",false);
@@ -86,7 +86,7 @@ layui.config({
 	        id: 'LAY_layuipro', //设定一个id，防止重复弹出
 	        btn: ['我知道了'],
 	        moveType: 1, //拖拽模式，0或者1
-	        content: '<div style="padding:15px 20px; text-align:justify; line-height: 22px; text-indent:2em;border-bottom:1px solid #e2e2e2;"><p>欢迎进入医养通系统，在这里您可以进行健康档案查询、用药查询和健康食谱查询。另外，你也可签约医生版块了解更多关于自己的签约医生的信息以及最近的身体诊断或让医生给您开电子处方。</p><p>此外，您还可以通过聊天室和别的注册用户进行交流，或者通过文章列表查阅我们推送的相关的养生文章。友情链接为与我们机构相关的网页信息。</p></div>',
+	        content: '<div style="padding:15px 20px; text-align:justify; line-height: 22px; text-indent:2em;border-bottom:1px solid #e2e2e2;"><p>欢迎进入医养通系统，您可以看到和您签约的居民信息，也可以通过和他们的交流作出初步诊断并开具电子处方。</p><p>此外，您还可以通过聊天室和别的注册用户进行交流。友情链接为与我们机构相关的网页信息。</p></div>',
 	        success: function(layero){
 				var btn = layero.find('.layui-layer-btn');
 				btn.css('text-align', 'center');

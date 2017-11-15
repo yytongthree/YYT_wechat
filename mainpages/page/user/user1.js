@@ -62,6 +62,18 @@ layui.config({
         //提交个人资料
         form.on("submit(changeUser)",function(data){
         	var index = layer.msg('提交中，请稍候',{icon: 16,time:false,shade:0.8});
+			var truename=$("#truename").val();
+			var sex=$("#sex").val();
+			var tel=$("#tel").val();
+			$.ajax({
+				url:"changeuser.php?action=ok",
+				type:'POST',
+				data:{"truename":truename,"sex":sex,"tel":tel},
+				async:true,
+				success: function(data){
+						newpwd=data;
+				}
+			})
             setTimeout(function(){
                 layer.close(index);
                 layer.msg("提交成功！");

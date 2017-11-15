@@ -25,13 +25,50 @@
 			<div class="layui-form-item">
 			    <label class="layui-form-label">用户组</label>
 			    <div class="layui-input-block">
-			    	<input type="text" value="超级管理员" disabled class="layui-input layui-disabled">
+                <?php
+					$conn = mysqli_connect("localhost","root","wenny673","yyt_info");
+					if (!$conn){
+						die('Could not connect: ' . mysqli_error());
+					}
+	
+					$query = "SELECT authority FROM register_info WHERE name='{$_SESSION['username']}'"; 
+     				//执行SQL语句  
+     				$result = mysqli_query($conn,$query) or die("Error in query: $query. ".mysqli_error());  
+     				//显示返回的记录集行数  
+     				if(mysqli_num_rows($result)>0){  
+         			//如果返回的数据集行数大于0，则开始以表格的形式显示   
+         				while($row=mysqli_fetch_row($result)){ 
+		 	 				$authority=$row[0];  
+         				}    
+     				}
+					switch($authority){
+						case "1":{
+				?>
+                <input type="text" value="非签约用户" disabled class="layui-input layui-disabled">
+                <?php
+						break;}
+						case "2":{
+				?>
+                <input type="text" value="签约用户" disabled class="layui-input layui-disabled">
+                <?php
+						break;}
+						case "3":{
+				?>
+                <input type="text" value="医生" disabled class="layui-input layui-disabled">
+                <?php
+						}
+					}
+     				//释放记录集所占用的内存  
+    				mysqli_free_result($result);  
+					mysqli_close($conn); 
+				?>
+
 			    </div>
 			</div>
 			<div class="layui-form-item">
 			    <label class="layui-form-label">真实姓名</label>
 			    <div class="layui-input-block">
-			    	<input type="text" value="" placeholder="请输入真实姓名" lay-verify="required" class="layui-input">
+			    	<input type="text" value="" placeholder="请输入真实姓名" lay-verify="required" id="truename" class="layui-input">
 			    </div>
 			</div>
 			<div class="layui-form-item" pane="">
@@ -45,7 +82,7 @@
 			<div class="layui-form-item">
 			    <label class="layui-form-label">手机号码</label>
 			    <div class="layui-input-block">
-			    	<input type="tel" value="" placeholder="请输入手机号码" lay-verify="required|phone" class="layui-input">
+			    	<input type="tel" value="" placeholder="请输入手机号码" id="tel" lay-verify="required|phone" class="layui-input">
 			    </div>
 			</div>
 			<div class="layui-form-item">
@@ -71,21 +108,6 @@
 	                    <option value="">请选择县/区</option>
 	                </select>
 	            </div>
-			</div>
-			<div class="layui-form-item">
-			    <label class="layui-form-label">兴趣爱好</label>
-			    <div class="layui-input-block">
-			    	<input type="checkbox" name="like1[javascript]" title="Javascript">
-				    <input type="checkbox" name="like1[html]" title="HTML(5)">
-				    <input type="checkbox" name="like1[css]" title="CSS(3)">
-				    <input type="checkbox" name="like1[php]" title="PHP">
-				    <input type="checkbox" name="like1[.net]" title=".net">
-				    <input type="checkbox" name="like1[ASP]" title="ASP">
-				    <input type="checkbox" name="like1[C#]" title="C#">
-				    <input type="checkbox" name="like1[Angular]" title="Angular">
-				    <input type="checkbox" name="like1[VUE]" title="VUE">
-				    <input type="checkbox" name="like1[XML]" title="XML">
-			    </div>
 			</div>
 			<div class="layui-form-item">
 			    <label class="layui-form-label">邮箱</label>
@@ -114,6 +136,6 @@
 	</form>
 	<script type="text/javascript" src="../../layui/layui.js"></script>
 	<script type="text/javascript" src="address.js"></script>
-	<script type="text/javascript" src="user.js"></script>
+	<script type="text/javascript" src="user1.js"></script>
 </body>
 </html>

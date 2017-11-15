@@ -135,6 +135,6 @@
 	<script type="text/javascript" src="layui/layui.js"></script>
 	<script type="text/javascript" src="js/nav2.js"></script>
 	<script type="text/javascript" src="js/leftNav2.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/index2.js"></script>
 </body>
 </html>

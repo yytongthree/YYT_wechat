@@ -3,9 +3,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" href="../layui/css/layui.css" media="all" />
-	<link rel="stylesheet" href="../css/font_eolqem241z66flxr.css" media="all" />
-	<link rel="stylesheet" href="../css/news.css" media="all" />
+	<link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="../../css/font_eolqem241z66flxr.css" media="all" />
+	<link rel="stylesheet" href="../../css/news.css" media="all" />
 <title>无标题文档</title>
 </head>
 

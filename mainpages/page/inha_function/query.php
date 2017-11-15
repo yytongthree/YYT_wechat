@@ -3,9 +3,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" href="../layui/css/layui.css" media="all" />
-	<link rel="stylesheet" href="../css/font_eolqem241z66flxr.css" media="all" />
-	<link rel="stylesheet" href="../css/news.css" media="all" />
+	<link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="../../css/font_eolqem241z66flxr.css" media="all" />
+	<link rel="stylesheet" href="../../css/news.css" media="all" />
 <title>无标题文档</title>
 </head>
 
@@ -19,48 +19,16 @@
      //创建一个mysql连接  
      $connection = mysqli_connect($host, $user, $pass,$db) or die("Unable to connect!");   
      //开始查询  
-     $query = "SELECT name FROM docter_info WHERE nickname='{$_SESSION['username']}'"; 
+     $query = "SELECT * FROM inha_info WHERE nickname='{$_SESSION['username']}'"; 
      //执行SQL语句  
      $result = mysqli_query($connection,$query) or die("Error in query: $query. ".mysqli_error()); 
 	 if(mysqli_num_rows($result)>0){  
          //如果返回的数据集行数大于0，则开始以表格的形式显示   
          while($row=mysqli_fetch_array($result)){
 			 $uname=$row['name'];
-         }    
-     }  
-     //释放记录集所占用的内存  
-     mysqli_free_result($result);
-     $query = "SELECT inha_name FROM doc_inha WHERE doc_name='{$uname}'"; 
-     //执行SQL语句  
-     $result = mysqli_query($connection,$query) or die("Error in query: $query. ".mysqli_error()); 
 ?>
-	<blockquote class="layui-elem-quote news_search">
-		<div class="layui-inline">
-		    <div class="layui-input-inline">
-            <form name="form1" enctype="multipart/form-data" method="post" action="">
-		    	<select name="name" lay-verify="" class="layui-input">
-  					<option value="">请选择用户</option>
-<?php
-	 if(mysqli_num_rows($result)>0){  
-         //如果返回的数据集行数大于0，则开始以表格的形式显示   
-         while($row=mysqli_fetch_array($result)){
-			 $inha_name=$row['inha_name'];
- ?>
-   			<option value="<?php echo $inha_name;?>"><?php echo $inha_name;?></option>
- <?php
-	 }
-	 }
-     //释放记录集所占用的内存  
-     mysqli_free_result($result);  
-	 mysqli_close($connection);  
-?>
-				</select>
-		    </div>
-		    <input type="submit" class="layui-btn" name="submit" value="查询">
-            </form>
-		</div>
-     </blockquote>
-     	<div class="layui-form">
+<blockquote class="layui-elem-quote title"><big><b><?php echo $uname;?>的身体数据</b></big></blockquote>
+	<div class="layui-form">
 	  	<table class="layui-table">
 		    <colgroup>
 				<col width="50%">
@@ -74,17 +42,6 @@
 					<th>单位</th>
 				</tr> 
 		    </thead>
-<?php
-	$conn=mysqli_connect("localhost","root","wenny673","yyt_info") or die("Unable to connect!");
-	function showTable($conn,$table_name){ 
-		$name=$_POST['name'];
-		$query = "SELECT * FROM $table_name WHERE name='{$name}'"; 
-     	//执行SQL语句  
-     	$result = mysqli_query($conn,$query) or die("Error in query: $query. ".mysqli_error()); 
-	 	if(mysqli_num_rows($result)>0){  
-        	 //如果返回的数据集行数大于0，则开始以表格的形式显示   
-         	while($row=mysqli_fetch_array($result)){
-?>
 		    <tbody>
 			 <tr>
 			 <td>身高(height)</td><td><?php echo $row['height'];?></td><td>cm</td>
@@ -119,13 +76,14 @@
 <?php
          }  
          echo "</table>";  
-     }   
+     }  
+     else{  
+         echo "记录未找到！";  
+     }  
      //释放记录集所占用的内存  
      mysqli_free_result($result);  
-	}
-	showTable($conn,"inha_info");
      //关闭该数据库连接  
-     mysqli_close($conn);  
+     mysqli_close($connection);  
  ?>
             </tbody>
 		</table>

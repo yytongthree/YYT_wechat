@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+.ys {
+	color: #F00;
+	font-size: 12px;
+}
+.zh {
+	font-size: 18px;
+	color: #000;
+}
+.cfq {
+	font-size: 24px;
+	font-weight: bold;
+	color: #000;
+}
+#apDiv1 {
+	position: absolute;
+	width: 179px;
+	height: 82px;
+	z-index: 1;
+	left: 140px;
+	top: 33px;
+	color: #000;
+}
+body,td,th {
+	color: #000;
+}
+.zt {
+	font-size: 30px;
+	font-weight: bold;
+}
+#apDiv2 {
+	position: absolute;
+	width: 109px;
+	height: 144px;
+	z-index: 2;
+	left: 346px;
+	top: 14px;
+	color: #000;
+}
+.yis {
+	font-size: 18px;
+	color: #F00;
+}
+#apDiv3 {
+	position: absolute;
+	width: 104px;
+	height: 54px;
+	z-index: 3;
+	left: 165px;
+	top: 131px;
+}
+#apDiv4 {
+	position: absolute;
+	width: 660px;
+	height: 733px;
+	z-index: 4;
+	left: 13px;
+	top: 202px;
+	visibility: inherit;
+}
+#apDiv5 {
+	position: absolute;
+	width: 273px;
+	height: 74px;
+	z-index: 5;
+	left: 332px;
+	top: 424px;
+}
+#apDiv6 {
+	position: absolute;
+	width: 273px;
+	height: 85px;
+	z-index: 5;
+	left: 333px;
+	top: 536px;
+}
+#apDiv7 {
+	position: absolute;
+	width: 139px;
+	height: 25px;
+	z-index: 5;
+	left: 223px;
+	top: 29px;
+}
+.layui-btn{
+	display:inline-block;
+	height:38px;
+	line-height:38px;
+	padding:0 18px;
+	background-color:#009688;
+	color:#fff;
+	white-space:nowrap;
+	text-align:center;
+	font-size:14px;
+	border:none;
+	border-radius:2px;
+	cursor:pointer;
+	opacity:.9;
+	filter:alpha(opacity=90)
+}
